@@ -1,4 +1,5 @@
 from flask import Flask
+from nba_api.stats.static import players
 
 app = Flask(__name__)
 
