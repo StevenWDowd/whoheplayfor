@@ -8,8 +8,10 @@ app = Flask(__name__)
 
 #GETs
 
-#landing page/begin game
-
+#landing page/begin game -- not needed, actually
+@app.get('/')
+def show_homepage():
+    """Show game homepage"""
 #player data page(name, picture, year)
 
 #results page (correct or incorrect)
