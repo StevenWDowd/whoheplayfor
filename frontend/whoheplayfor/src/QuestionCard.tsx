@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { PlayerInterface } from "./utils";
 
-function QuestionCard(player){
+function QuestionCard(player: PlayerInterface){
 
 }
 
