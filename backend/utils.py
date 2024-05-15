@@ -72,6 +72,22 @@ def get_player_season(id):
     'year_founded': 1946}"""
 
 def generate_question_data(player, season):
+    """Returns a dictionary on a player, containing information needed
+    for the front end."""
+    player_team = teams.find_team_name_by_id(season['TEAM_ID'][0])
+
+    player_id_str = str(player['id'])
+
+    player_headshot = f'{headshot_url_stub}{player_id_str}.png'
+
+    question_dict = {
+        'player_name': player['full_name'],
+        'season': season['SEASON_ID'][0],
+        'team' : player_team,
+        'img_source': player_headshot,
+    }
+
+    return question_dict
 
 
 
